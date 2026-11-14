@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khaled Mohamed — مصمم جرافيك</title>
+<meta name="description" content="خالد محمد — مصمم جرافيك. هويات بصرية، بوسترات وأفيشات، فعاليات ومعارض، وموشن جرافيك.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#060606;--panel:#0e0e0f;--ink:#f2f2f2;--mute:#8d8d92;--line:rgba(255,255,255,.08);
+  --orange:#ff5a1f;--orange2:#ff8a3d;
+  --chrome:linear-gradient(180deg,#ffffff 0%,#e6e6e8 30%,#9d9da3 52%,#5a5a60 60%,#d4d4d8 85%,#ffffff 100%);
+  --noise:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Alexandria',sans-serif;overflow-x:hidden;line-height:1.8;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+body::after{content:"";position:fixed;inset:-50%;background-image:var(--noise);opacity:.11;pointer-events:none;z-index:200;animation:grain 1s steps(6) infinite}
+@keyframes grain{0%,100%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-3%)}60%{transform:translate(-2%,-1%)}80%{transform:translate(3%,3%)}}
+.wrap{max-width:1240px;margin:0 auto;padding:0 28px}
+.en{font-family:'Space Grotesk',sans-serif;direction:ltr;unicode-bidi:isolate}
+.grad{background:linear-gradient(180deg,#fff 20%,#9a9aa0 110%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.chrome{background:linear-gradient(110deg,transparent 38%,rgba(255,255,255,.95) 50%,transparent 62%),var(--chrome);background-size:250% 100%,100% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sheen 6s ease-in-out infinite}
+@keyframes sheen{0%,40%{background-position:150% 0,0 0}80%,100%{background-position:-50% 0,0 0}}
+.o{color:var(--orange)}
+
+/* topbar + nav */
+.topbar{border-bottom:1px solid var(--line);font-size:13px;color:#bdbdc2;background:#0a0a0a;position:relative;z-index:20}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:40px}
+.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--orange);margin-inline-end:10px;box-shadow:0 0 12px var(--orange);animation:pulse 1.6s infinite;vertical-align:middle}
+@keyframes pulse{50%{opacity:.35}}
+nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(16px);background:rgba(6,6,6,.6);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:72px}
+.logo{display:flex;align-items:center;gap:10px;font-family:'Space Grotesk';font-weight:700;font-size:20px;letter-spacing:.04em;direction:ltr}
+.logo i{width:28px;height:28px;border-radius:8px;background:conic-gradient(from 210deg,var(--orange),#ffd0b0,var(--orange),#7a2a0a,var(--orange));display:grid;place-items:center;font-style:normal;font-size:13px;color:#111;font-weight:800}
+.links{display:flex;gap:34px;font-size:14.5px;color:#cfcfd4}
+.links a:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;font-weight:600;font-size:14.5px;transition:.3s;cursor:pointer;border:0;font-family:inherit}
+.btn-o{background:linear-gradient(180deg,var(--orange2),var(--orange));color:#fff;box-shadow:0 0 0 1px rgba(255,255,255,.15) inset,0 10px 30px rgba(255,90,31,.35)}
+.btn-o:hover{box-shadow:0 0 0 1px rgba(255,255,255,.25) inset,0 10px 50px rgba(255,90,31,.6);transform:translateY(-1px)}
+.btn-g{background:rgba(255,255,255,.04);color:#fff;border:1px solid var(--line)}
+.btn-g:hover{background:rgba(255,255,255,.09)}
+.wa svg{width:18px;height:18px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:100px 0 0;text-align:center}
+.beam{position:absolute;top:-180px;left:4%;width:180px;height:720px;background:linear-gradient(180deg,rgba(255,138,61,0),rgba(255,120,40,.95) 45%,rgba(255,90,31,0));transform:rotate(-42deg);filter:blur(28px);opacity:.85;pointer-events:none;animation:beam 7s ease-in-out infinite}
+.beam.b2{width:50px;filter:blur(6px);opacity:.9;left:9%;background:linear-gradient(180deg,rgba(255,200,150,0),#ffb98a 45%,rgba(255,90,31,0))}
+@keyframes beam{50%{opacity:.55;transform:rotate(-40deg) translateY(20px)}}
+.glow{position:absolute;inset:auto 0 0 0;height:60%;background:radial-gradient(60% 60% at 50% 100%,rgba(255,90,31,.16),transparent 70%);pointer-events:none}
+.bggrid{position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(ellipse 70% 60% at 50% 40%,#000 30%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 40%,#000 30%,transparent 75%);opacity:.6;pointer-events:none}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:6px 8px 6px 14px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.03);font-size:13px;color:#d6d6da;position:relative}
+.pill b{background:rgba(255,90,31,.15);color:var(--orange2);border-radius:999px;padding:2px 10px;font-weight:600;font-size:11.5px}
+.hero h1{font-family:'Space Grotesk';font-weight:500;font-size:clamp(56px,10vw,136px);line-height:.98;letter-spacing:-.04em;margin:26px auto 24px;position:relative;direction:ltr}
+.hero p.sub{max-width:600px;margin:0 auto;color:var(--mute);font-size:17px;position:relative}
+.cta{display:flex;gap:12px;justify-content:center;margin-top:34px;position:relative}
+.circuit{position:relative;margin:30px auto 0;max-width:1240px}
+.circuit svg{width:100%;height:auto;display:block}
+.trace{fill:none;stroke:rgba(255,255,255,.13);stroke-width:1.4}
+.pulse{fill:none;stroke:url(#og);stroke-width:2.4;stroke-linecap:round;stroke-dasharray:7 93;animation:run 3.2s linear infinite;filter:drop-shadow(0 0 6px var(--orange))}
+@keyframes run{from{stroke-dashoffset:100}to{stroke-dashoffset:0}}
+.tile{animation:bob 6s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-8px)}}
+
+/* marquee */
+.marquee{border-block:1px solid var(--line);overflow:hidden;padding:22px 0;background:#080808;direction:ltr}
+.track{display:flex;width:max-content;animation:scroll 34s linear infinite}
+.track span{font-size:clamp(24px,3.2vw,40px);font-weight:600;padding-right:56px;white-space:nowrap;color:#3a3a3e;direction:rtl}
+.track span em{font-style:normal;color:var(--orange);padding:0 28px}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* sections */
+section{padding:130px 0;position:relative}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13.5px;color:var(--orange2);margin-bottom:16px;font-weight:500}
+.eyebrow::before{content:"";width:22px;height:1px;background:var(--orange)}
+h2{font-weight:700;font-size:clamp(38px,5.4vw,72px);line-height:1.15;letter-spacing:-.01em}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:40px;flex-wrap:wrap}
+.head p{color:var(--mute);max-width:400px}
+
+/* filters */
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:34px}
+.filters button{font-family:inherit;font-size:14px;color:#cfcfd4;background:rgba(255,255,255,.03);border:1px solid var(--line);padding:9px 18px;border-radius:999px;cursor:pointer;transition:.3s}
+.filters button:hover{color:#fff;border-color:rgba(255,255,255,.2)}
+.filters button.on{background:linear-gradient(180deg,var(--orange2),var(--orange));color:#fff;border-color:transparent;box-shadow:0 8px 24px rgba(255,90,31,.3)}
+.filters button span{opacity:.6;font-size:12px;margin-inline-start:6px}
+
+/* work grid */
+.vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.vcard{position:relative;border-radius:18px;overflow:hidden;background:var(--panel);border:1px solid var(--line);cursor:pointer;transition:border-color .4s,transform .5s,opacity .4s}
+.vcard.feat{grid-column:span 2;grid-row:span 2}
+.vcard .thumb{position:relative;aspect-ratio:16/9;overflow:hidden}
+.vcard.feat .thumb{aspect-ratio:auto;height:100%}
+.vcard img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.vcard:hover{border-color:rgba(255,90,31,.55);transform:translateY(-4px);box-shadow:0 20px 60px rgba(255,90,31,.12)}
+.vcard:hover img{transform:scale(1.06)}
+.vcard .thumb::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.88) 0%,rgba(0,0,0,.2) 45%,transparent 70%)}
+.play{position:absolute;top:50%;left:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:rgba(255,255,255,.12);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.3);display:grid;place-items:center;transition:.4s;z-index:2;opacity:0;transform:scale(.8)}
+.play::after{content:"";border-left:16px solid #fff;border-top:10px solid transparent;border-bottom:10px solid transparent;margin-left:4px}
+.vcard:hover .play{opacity:1;transform:scale(1);background:var(--orange);border-color:var(--orange);box-shadow:0 0 50px var(--orange)}
+.vmeta{position:absolute;inset:auto 0 0 0;padding:18px 20px;z-index:2}
+.vmeta b{display:block;font-size:17px;font-weight:700;line-height:1.4}
+.vcard.feat .vmeta b{font-size:26px}
+.vmeta small{color:#c9c9ce;font-size:13px}
+.vnum{position:absolute;top:14px;right:16px;z-index:2;font-family:'Space Grotesk';font-size:13px;color:#fff;background:rgba(0,0,0,.45);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.15);padding:2px 10px;border-radius:999px}
+.vcard.hide{display:none}
+
+/* about */
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
+.portrait{position:relative;border-radius:26px;overflow:hidden;aspect-ratio:4/5;border:1px solid var(--line)}
+.portrait img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.15) brightness(.85)}
+.portrait::before{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(255,110,40,.75) 0%,rgba(255,90,31,.15) 35%,transparent 60%);mix-blend-mode:color;z-index:1}
+.portrait::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#060606 0%,transparent 35%),radial-gradient(circle at 0% 0%,rgba(255,120,40,.45),transparent 50%);z-index:2}
+.portrait .badge{position:absolute;right:20px;bottom:20px;z-index:3;font-size:13.5px}
+.about-text p{font-size:clamp(17px,1.5vw,20px);line-height:2;color:#cfcfd4;margin-top:14px}
+.about-text p:first-of-type{font-size:clamp(22px,2.2vw,30px);color:#fff;line-height:1.6;font-weight:500}
+.skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.skills span{padding:9px 16px;border:1px solid var(--line);border-radius:999px;font-size:13.5px;color:#cfcfd4;background:rgba(255,255,255,.02)}
+.skills span.en{direction:ltr}
+
+/* services */
+.sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.svc{position:relative;padding:32px 28px 30px;border-radius:20px;background:linear-gradient(180deg,#111112,#0a0a0b);border:1px solid var(--line);overflow:hidden;transition:.4s}
+.svc::before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;background:radial-gradient(300px circle at var(--x,50%) var(--y,0%),rgba(255,90,31,.85),transparent 60%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .4s}
+.svc:hover::before{opacity:1}
+.svc .ic{width:48px;height:48px;border-radius:12px;background:#1a1a1c;border:1px solid var(--line);display:grid;place-items:center;font-family:'Space Grotesk';font-weight:700;margin-bottom:46px;color:var(--orange2)}
+.svc h3{font-size:21px;font-weight:700;margin-bottom:8px}
+.svc p{color:var(--mute);font-size:14.5px}
+.svc.wide{grid-column:span 2}
+
+/* contact */
+.contact-card{position:relative;border-radius:30px;overflow:hidden;padding:100px 30px;text-align:center;border:1px solid var(--line);background:radial-gradient(70% 90% at 50% 120%,rgba(255,90,31,.45),transparent 70%),#0a0a0a}
+.contact-card h2{font-size:clamp(54px,8.5vw,120px);line-height:1.1}
+.contact-card h3{font-size:clamp(20px,2.2vw,28px);font-weight:600;margin-top:18px}
+.contact-card p{color:#a9a9ae;margin:14px auto 0;max-width:620px;font-size:16.5px}
+.contact-card .btn{margin-top:36px;font-size:16px;padding:14px 28px}
+.contact-card .num{display:block;margin-top:18px;color:#bdbdc2;letter-spacing:.06em;font-size:14px;direction:ltr}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--mute);font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+/* modal */
+.modal{position:fixed;inset:0;z-index:300;background:rgba(0,0,0,.88);backdrop-filter:blur(8px);display:none;place-items:center;padding:20px}
+.modal.open{display:grid}
+.modal .box{width:min(1100px,100%)}
+.modal .frame{position:relative;aspect-ratio:16/9;border-radius:18px;overflow:hidden;background:#000;border:1px solid var(--line);box-shadow:0 0 120px rgba(255,90,31,.25)}
+.modal iframe,.modal .frame img{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:contain}
+.modal .bar{display:flex;justify-content:space-between;align-items:center;margin-top:14px;font-size:15px;gap:16px}
+.modal .bar b{font-weight:700}
+.modal .bar small{color:var(--mute);margin-inline-start:8px}
+.modal .acts{display:flex;gap:10px;align-items:center}
+.modal .close{background:none;border:1px solid var(--line);color:#fff;border-radius:999px;padding:8px 16px;cursor:pointer;font-family:inherit}
+
+.reveal{opacity:0;transform:translateY(36px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:980px){.vgrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:860px){
+  .links,.topbar .right{display:none}
+  .sgrid,.about{grid-template-columns:1fr}
+  .svc.wide{grid-column:auto}
+  .about{gap:40px}
+  .beam{left:-20%}
+  .cta{flex-direction:column;align-items:center}
+  .modal .bar{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:600px){.vgrid{grid-template-columns:1fr}.vcard.feat{grid-column:auto;grid-row:auto}.vcard.feat .thumb{aspect-ratio:16/9;height:auto}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <a href="https://wa.me/201060595961" target="_blank" rel="noopener"><span class="dot"></span>متاح لمشاريع جديدة — لنعمل معًا ←</a>
+  <span class="right">هويات بصرية · بوسترات · فعاليات ومعارض · موشن</span>
+</div></div>
+
+<nav><div class="wrap">
+  <a href="#top" class="logo"><i>K</i>KHALED</a>
+  <div class="links">
+    <a href="#work">أعمالي</a><a href="#about">نبذة عني</a><a href="#services">خدماتي</a><a href="#contact">تواصل</a>
+  </div>
+  <a class="btn btn-o" href="#contact">تواصل معي</a>
+</div></nav>
+
+<header class="hero" id="top">
+  <div class="bggrid"></div>
+  <div class="beam"></div><div class="beam b2"></div>
+  <div class="glow"></div>
+  <div class="wrap">
+    <span class="pill"><b class="en">2026</b> مصمم جرافيك</span>
+    <h1><span class="grad">Khaled</span><br><span class="chrome">Mohamed</span></h1>
+    <p class="sub">مصمم جرافيك شغوف بالإبداع وتحويل الأفكار إلى تجارب بصرية مميزة ومؤثرة.</p>
+    <div class="cta">
+      <a class="btn btn-o" href="#work">شاهد أعمالي</a>
+      <a class="btn btn-g wa" href="https://wa.me/201060595961" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.6 11.6 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>
+        كلمني واتساب</a>
+    </div>
+  </div>
+
+  <div class="circuit">
+    <svg viewBox="0 0 1200 470" aria-hidden="true">
+      <defs>
+        <linearGradient id="og" x1="0" x2="1"><stop offset="0" stop-color="#ffb98a"/><stop offset="1" stop-color="#ff5a1f"/></linearGradient>
+        <linearGradient id="chipg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a2a2d"/><stop offset="1" stop-color="#0c0c0d"/></linearGradient>
+        <linearGradient id="chromeg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset=".45" stop-color="#a5a5ab"/><stop offset=".55" stop-color="#55555a"/><stop offset="1" stop-color="#f0f0f2"/></linearGradient>
+        <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8a8a90"/><stop offset=".5" stop-color="#2a2a2e"/><stop offset="1" stop-color="#c9c9ce"/></linearGradient>
+        <radialGradient id="halo"><stop offset="0" stop-color="#ff5a1f" stop-opacity=".45"/><stop offset="1" stop-color="#ff5a1f" stop-opacity="0"/></radialGradient>
+      </defs>
+      <rect x="210" y="40" width="780" height="330" rx="22" fill="none" stroke="rgba(255,255,255,.05)"/>
+      <rect x="330" y="120" width="540" height="350" rx="22" fill="none" stroke="rgba(255,255,255,.05)"/>
+      <g class="trace">
+        <path d="M525 225 H390 L280 115 H190"/><path d="M525 285 H400 L360 325 H160"/>
+        <path d="M675 225 H810 L920 115 H1010"/><path d="M675 285 H800 L840 325 H1040"/>
+        <path d="M575 330 V470"/><path d="M600 330 V470"/><path d="M625 330 V470"/>
+        <path d="M600 180 V60 H230"/><path d="M600 180 V60 H970"/>
+        <path d="M60 230 H110"/><path d="M1090 230 H1140"/>
+      </g>
+      <g>
+        <path class="pulse" pathLength="100" d="M525 225 H390 L280 115 H190"/>
+        <path class="pulse" pathLength="100" style="animation-delay:-1.1s" d="M525 285 H400 L360 325 H160"/>
+        <path class="pulse" pathLength="100" style="animation-delay:-.6s" d="M675 225 H810 L920 115 H1010"/>
+        <path class="pulse" pathLength="100" style="animation-delay:-2s" d="M675 285 H800 L840 325 H1040"/>
+        <path class="pulse" pathLength="100" style="animation-duration:2.2s" d="M600 330 V470"/>
+        <path class="pulse" pathLength="100" style="animation-duration:2.6s;animation-delay:-1s" d="M575 330 V470"/>
+        <path class="pulse" pathLength="100" style="animation-duration:2.9s;animation-delay:-.4s" d="M625 330 V470"/>
+        <path class="pulse" pathLength="100" style="animation-duration:4s;animation-delay:-1.5s;animation-direction:reverse" d="M600 180 V60 H230"/>
+        <path class="pulse" pathLength="100" style="animation-duration:4s;animation-direction:reverse" d="M600 180 V60 H970"/>
+      </g>
+      <circle cx="600" cy="255" r="170" fill="url(#halo)"/>
+      <g fill="#3a3a3e">
+        <rect x="517" y="217" width="10" height="5" rx="1"/><rect x="517" y="237" width="10" height="5" rx="1"/><rect x="517" y="257" width="10" height="5" rx="1"/><rect x="517" y="277" width="10" height="5" rx="1"/>
+        <rect x="673" y="217" width="10" height="5" rx="1"/><rect x="673" y="237" width="10" height="5" rx="1"/><rect x="673" y="257" width="10" height="5" rx="1"/><rect x="673" y="277" width="10" height="5" rx="1"/>
+        <rect x="572" y="328" width="5" height="10" rx="1"/><rect x="597" y="328" width="5" height="10" rx="1"/><rect x="622" y="328" width="5" height="10" rx="1"/>
+        <rect x="597" y="172" width="5" height="10" rx="1"/>
+      </g>
+      <rect x="525" y="180" width="150" height="150" rx="26" fill="url(#edge)"/>
+      <rect x="527" y="182" width="146" height="146" rx="24" fill="url(#chipg)"/>
+      <rect x="541" y="196" width="118" height="118" rx="16" fill="none" stroke="rgba(255,255,255,.07)"/>
+      <text x="600" y="276" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="56" fill="url(#chromeg)">KM</text>
+      <g class="tile"><rect x="110" y="75" width="80" height="80" rx="18" fill="#141416" stroke="rgba(255,255,255,.1)"/><text x="150" y="126" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="28" fill="url(#chromeg)">Ps</text></g>
+      <g class="tile" style="animation-delay:-2s"><rect x="80" y="285" width="80" height="80" rx="18" fill="#141416" stroke="rgba(255,255,255,.1)"/><text x="120" y="336" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="28" fill="url(#chromeg)">Ai</text></g>
+      <g class="tile" style="animation-delay:-1s"><rect x="1010" y="75" width="80" height="80" rx="18" fill="#141416" stroke="rgba(255,255,255,.1)"/><text x="1050" y="126" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="28" fill="url(#chromeg)">Pr</text></g>
+      <g class="tile" style="animation-delay:-3s"><rect x="1040" y="285" width="80" height="80" rx="18" fill="#141416" stroke="rgba(255,255,255,.1)"/><text x="1080" y="336" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="28" fill="url(#chromeg)">Ae</text></g>
+      <g class="tile" style="animation-delay:-4s"><rect x="30" y="212" width="36" height="36" rx="10" fill="#141416" stroke="rgba(255,255,255,.08)"/><circle cx="48" cy="230" r="4" fill="#ff5a1f"/></g>
+      <g class="tile" style="animation-delay:-2.5s"><rect x="1134" y="212" width="36" height="36" rx="10" fill="#141416" stroke="rgba(255,255,255,.08)"/><circle cx="1152" cy="230" r="4" fill="#ff8a3d"/></g>
+    </svg>
+  </div>
+</header>
+
+<div class="marquee"><div class="track">
+  <span>الهويات البصرية<em>✦</em>بوسترات الأغاني<em>✦</em>الفعاليات والمعارض<em>✦</em>التصميمات الإبداعية<em>✦</em>موشن جرافيك<em>✦</em></span>
+  <span>الهويات البصرية<em>✦</em>بوسترات الأغاني<em>✦</em>الفعاليات والمعارض<em>✦</em>التصميمات الإبداعية<em>✦</em>موشن جرافيك<em>✦</em></span>
+</div></div>
+
+<section id="work"><div class="wrap">
+  <div class="head">
+    <div><div class="eyebrow">أعمال مختارة</div><h2><span class="grad">أعمالي</span></h2></div>
+    <p>بوسترات وأغلفة أغاني لنجوم المهرجانات. اضغط على أي عمل علشان تشوف الكليب.</p>
+  </div>
+  <div class="filters" id="filters"></div>
+  <div class="vgrid" id="vgrid"></div>
+</div></section>
+
+<section id="about" style="padding-top:40px"><div class="wrap about">
+  <div class="portrait reveal"><img src="images/khaled.jpg" alt="Khaled Mohamed"><span class="badge"><span class="dot"></span>مصر · متاح للعمل</span></div>
+  <div class="about-text reveal">
+    <div class="eyebrow">نبذة عني</div>
+    <h2><span class="grad">تصميم</span> <span class="chrome">يترك أثرًا.</span></h2>
+    <p>أنا مصمم جرافيك شغوف بالإبداع وتحويل الأفكار إلى تجارب بصرية مميزة ومؤثرة.</p>
+    <p>أهتم بتصميم الهويات البصرية، والتصميمات الإبداعية، والفعاليات والمعارض، مع التركيز على أدق التفاصيل وتناسق الألوان وتكوين العناصر.</p>
+    <p>أسعى دائمًا إلى تقديم تصميمات مبتكرة تجمع بين الإبداع والجودة والاحترافية، وتعكس هوية كل مشروع بأسلوب بصري فريد.</p>
+    <div class="skills">
+      <span class="en">Photoshop</span><span class="en">Illustrator</span><span class="en">Premiere Pro</span><span class="en">After Effects</span>
+    </div>
+  </div>
+</div></section>
+
+<section id="services" style="padding-top:40px"><div class="wrap">
+  <div class="head">
+    <div><div class="eyebrow">خدماتي</div><h2><span class="grad">بقدّم إيه؟</span></h2></div>
+    <p>من بوستر واحد لحد هوية بصرية كاملة بالموشن.</p>
+  </div>
+  <div class="sgrid">
+    <div class="svc reveal wide"><div class="ic en">01</div><h3>بوسترات وأغلفة الأغاني</h3><p>أفيشات وأغلفة كليبات بتشد العين من أول نظرة، بدمج الصور والخطوط والتأثيرات.</p></div>
+    <div class="svc reveal"><div class="ic en">02</div><h3>الهويات البصرية</h3><p>لوجوهات وهويات متكاملة تعبّر عن روح كل مشروع.</p></div>
+    <div class="svc reveal"><div class="ic en">03</div><h3>الفعاليات والمعارض</h3><p>تصميمات للفعاليات والمعارض من البانرات لحد الواجهات.</p></div>
+    <div class="svc reveal"><div class="ic en">04</div><h3>السوشيال ميديا</h3><p>بوستات وكوفرات بتوقف السكرول.</p></div>
+    <div class="svc reveal"><div class="ic en">05</div><h3>موشن جرافيك ومونتاج</h3><p>تحريك البوسترات والعناوين ومونتاج الفيديوهات.</p></div>
+  </div>
+</div></section>
+
+<section id="contact" style="padding-top:40px"><div class="wrap">
+  <div class="contact-card reveal">
+    <div class="eyebrow">تواصل</div>
+    <h2><span class="chrome">لنعمل معًا</span></h2>
+    <h3>هل لديك فكرة أو مشروع جديد؟</h3>
+    <p>دعنا نحول أفكارك إلى تجربة بصرية استثنائية تجمع بين الإبداع والتميز.<br>يسعدني التعاون معك لإنشاء تصميمات تعكس رؤيتك وتترك انطباعًا مميزًا.</p>
+    <a class="btn btn-o wa" href="https://wa.me/201060595961" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.6 11.6 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>
+      تواصل معي على واتساب</a>
+    <span class="num">+20 106 059 5961</span>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><span>© 2026 Khaled Mohamed</span><span>مصمم جرافيك</span></div></footer>
+
+<div class="modal" id="modal">
+  <div class="box">
+    <div class="frame" id="frame"></div>
+    <div class="bar"><div><b id="mt"></b><small id="ma"></small></div><div class="acts"><a id="ytlink" class="o" href="#" target="_blank" rel="noopener">شاهد على يوتيوب ↗</a><button class="close" id="close">إغلاق ✕</button></div></div>
+  </div>
+</div>
+
+<script>
+/* ===== الأعمال: عدّل هنا (img = الصورة، yt = كود فيديو يوتيوب) ===== */
+const works=[
+  {img:'09',title:'ملوك ساقت كارها',artist:'عصام صاصا',yt:'Jtkyais1jmQ'},
+  {img:'02',title:'أنا الزعيم',artist:'عصام صاصا',yt:'3O80r76uZOQ'},
+  {img:'04',title:'متركزش وتتأمل وتبصبص',artist:'عصام صاصا',yt:'pPL4vSjDj9c'},
+  {img:'10',title:'زعلان مني ومش منكو',artist:'أمين خطاب × مصطفى الجن',yt:'i24xub2G_5E'},
+  {img:'05',title:'قالوا عليا سفاح مسيطر',artist:'عصام صاصا',yt:'OsPQjlFt1sY'},
+  {img:'01',title:'طب بحبك',artist:'حمو المرشدي',yt:'Hk-oNOL87HI'},
+  {img:'08',title:'باي باي',artist:'عصام صاصا',yt:'7uhUrIq8evg'},
+  {img:'03',title:'استفدت إيه بكبريائك',artist:'عصام صاصا',yt:'5ZNpn_7oHXA'},
+  {img:'11',title:'الغلابة',artist:'أمين خطاب & مصطفى الجن',yt:'pY_DFKf8kr0'},
+  {img:'06',title:'أربع بيبان اتهدوا',artist:'عصام صاصا',yt:'bgQ0YiLR2QQ'},
+  {img:'07',title:'يا صباح عنابي',artist:'عصام صاصا',yt:'CR9gVspoq30'},
+  {img:'12',title:'لو نرجع تاني عيال',artist:'أمين خطاب',yt:'iOaFqw_fvwI'}
+];
+const g=document.getElementById('vgrid'),fl=document.getElementById('filters');
+works.forEach((w,i)=>{
+  const a=document.createElement('a');
+  a.className='vcard reveal'+(i===0?' feat':'');a.dataset.artist=w.artist;
+  a.href=w.yt?'https://www.youtube.com/watch?v='+w.yt:'images/posters/'+w.img+'.jpg';a.target='_blank';a.rel='noopener';
+  a.innerHTML=`<div class="thumb"><img loading="lazy" src="images/posters/${w.img}.jpg" alt="${w.title} — ${w.artist}"><span class="vnum en">${String(i+1).padStart(2,'0')}</span>${w.yt?'<div class="play"></div>':''}<div class="vmeta"><b>${w.title}</b><small>${w.artist}</small></div></div>`;
+  a.addEventListener('click',e=>{e.preventDefault();openW(w)});
+  g.appendChild(a);
+});
+/* filters by main artist */
+const main=a=>a.split(/[×&]/)[0].trim();
+const counts={};works.forEach(w=>{const m=main(w.artist);counts[m]=(counts[m]||0)+1});
+const mk=(label,val,n)=>{const b=document.createElement('button');b.innerHTML=`${label}<span class="en">${n}</span>`;b.onclick=()=>{fl.querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on');g.querySelectorAll('.vcard').forEach(c=>c.classList.toggle('hide',val&&main(c.dataset.artist)!==val))};fl.appendChild(b);return b};
+mk('الكل','',works.length).classList.add('on');
+Object.entries(counts).sort((a,b)=>b[1]-a[1]).forEach(([k,n])=>mk(k,k,n));
+
+const modal=document.getElementById('modal'),frame=document.getElementById('frame'),yl=document.getElementById('ytlink');
+function openW(w){
+  document.getElementById('mt').textContent=w.title;document.getElementById('ma').textContent=w.artist;
+  if(w.yt){frame.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${w.yt}?autoplay=1&rel=0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>`;yl.href='https://www.youtube.com/watch?v='+w.yt;yl.style.display=''}
+  else{frame.innerHTML=`<img src="images/posters/${w.img}.jpg" alt="">`;yl.style.display='none'}
+  modal.classList.add('open');
+}
+function closeW(){modal.classList.remove('open');frame.innerHTML=''}
+document.getElementById('close').onclick=closeW;
+modal.addEventListener('click',e=>{if(e.target===modal)closeW()});
+addEventListener('keydown',e=>{if(e.key==='Escape')closeW()});
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%3)*90+'ms';io.observe(el)});
+document.querySelectorAll('.svc').forEach(c=>c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect();c.style.setProperty('--x',e.clientX-r.left+'px');c.style.setProperty('--y',e.clientY-r.top+'px')}));
+</script>
+</body>
+</html>
