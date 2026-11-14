@@ -111,11 +111,12 @@ h2{font-weight:700;font-size:clamp(38px,5.4vw,72px);line-height:1.15;letter-spac
 
 /* about */
 .about{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
-.portrait{position:relative;border-radius:26px;overflow:hidden;aspect-ratio:4/5;border:1px solid var(--line)}
-.portrait img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.15) brightness(.85)}
-.portrait::before{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(255,110,40,.75) 0%,rgba(255,90,31,.15) 35%,transparent 60%);mix-blend-mode:color;z-index:1}
-.portrait::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#060606 0%,transparent 35%),radial-gradient(circle at 0% 0%,rgba(255,120,40,.45),transparent 50%);z-index:2}
-.portrait .badge{position:absolute;right:20px;bottom:20px;z-index:3;font-size:13.5px}
+.portrait{position:relative;aspect-ratio:4/5;display:flex;align-items:flex-end;justify-content:center}
+.portrait::before{content:"";position:absolute;left:50%;top:44%;width:92%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,rgba(255,110,40,.55) 0%,rgba(255,90,31,.18) 45%,transparent 70%);filter:blur(10px);z-index:0}
+.portrait::after{content:"";position:absolute;left:50%;top:44%;width:78%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;border:1px solid rgba(255,255,255,.08);box-shadow:0 0 0 40px rgba(255,255,255,.015),0 0 0 80px rgba(255,255,255,.01);z-index:0}
+.portrait .bgword{position:absolute;top:8%;left:50%;transform:translateX(-50%);font-family:'Space Grotesk';font-weight:700;font-size:clamp(70px,9vw,140px);line-height:1;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.12);letter-spacing:-.03em;z-index:0;direction:ltr;white-space:nowrap}
+.portrait img{position:relative;z-index:1;height:100%;width:auto;max-width:100%;object-fit:contain;object-position:bottom;filter:none}
+.portrait .badge{position:absolute;right:10px;bottom:24px;z-index:3;font-size:13.5px;background:rgba(10,10,10,.6);backdrop-filter:blur(8px);border:1px solid var(--line);padding:8px 14px;border-radius:999px}
 .about-text p{font-size:clamp(17px,1.5vw,20px);line-height:2;color:#cfcfd4;margin-top:14px}
 .about-text p:first-of-type{font-size:clamp(22px,2.2vw,30px);color:#fff;line-height:1.6;font-weight:500}
 .skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
@@ -266,7 +267,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 </div></section>
 
 <section id="about" style="padding-top:40px"><div class="wrap about">
-  <div class="portrait reveal"><img src="images/khaled.jpg" alt="Khaled Mohamed"><span class="badge"><span class="dot"></span>مصر · متاح للعمل</span></div>
+  <div class="portrait reveal"><span class="bgword">KHALED</span><img src="images/khaled-cut.webp" alt="Khaled Mohamed"><span class="badge"><span class="dot"></span>مصر · متاح للعمل</span></div>
   <div class="about-text reveal">
     <div class="eyebrow">نبذة عني</div>
     <h2><span class="grad">تصميم</span> <span class="chrome">يترك أثرًا.</span></h2>
