@@ -155,6 +155,19 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 .modal .acts{display:flex;gap:10px;align-items:center}
 .modal .close{background:none;border:1px solid var(--line);color:#fff;border-radius:999px;padding:8px 16px;cursor:pointer;font-family:inherit}
 
+
+.nav-r{display:flex;align-items:center;gap:12px}
+.lang{position:relative;display:flex;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:999px;padding:4px;direction:ltr}
+.lang button{position:relative;z-index:1;padding:7px 14px;font-size:13px;font-weight:700;border-radius:999px;color:#cfcfd4;background:none;border:0;cursor:pointer;font-family:'Space Grotesk',sans-serif;transition:color .35s}
+.lang button[data-l="ar"]{font-family:'Alexandria',sans-serif}
+.lang button.on{color:#fff}
+.lang i{position:absolute;top:4px;bottom:4px;left:4px;width:calc(50% - 4px);background:linear-gradient(180deg,var(--orange2),var(--orange));border-radius:999px;transition:transform .5s cubic-bezier(.7,0,.2,1);box-shadow:0 6px 18px rgba(255,90,31,.35)}
+html[lang="en"] .lang i{transform:translateX(100%)}
+main,section,header,.marquee,footer,.topbar{transition:opacity .28s,filter .28s}
+body.swap section,body.swap header,body.swap .marquee,body.swap footer,body.swap .topbar{opacity:0;filter:blur(6px)}
+html[lang="en"] .eyebrow,html[lang="en"] h2{letter-spacing:-.01em}
+@media(max-width:860px){.nav-r .btn{display:none}}
+
 .reveal{opacity:0;transform:translateY(36px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
 .reveal.in{opacity:1;transform:none}
 
@@ -174,16 +187,16 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 <body>
 
 <div class="topbar"><div class="wrap">
-  <a href="https://wa.me/201060595961" target="_blank" rel="noopener"><span class="dot"></span>متاح لمشاريع جديدة — لنعمل معًا ←</a>
-  <span class="right">هويات بصرية · بوسترات · فعاليات ومعارض · موشن</span>
+  <a href="https://wa.me/201060595961" target="_blank" rel="noopener"><span class="dot"></span><span data-en="Available for new projects — let's work together →">متاح لمشاريع جديدة — لنعمل معًا ←</span></a>
+  <span class="right" data-en="Visual identity · Posters · Events & exhibitions · Motion">هويات بصرية · بوسترات · فعاليات ومعارض · موشن</span>
 </div></div>
 
 <nav><div class="wrap">
   <a href="#top" class="logo"><i>K</i>KHALED</a>
   <div class="links">
-    <a href="#work">أعمالي</a><a href="#about">نبذة عني</a><a href="#services">خدماتي</a><a href="#contact">تواصل</a>
+    <a href="#work" data-en="Work">أعمالي</a><a href="#about" data-en="About">نبذة عني</a><a href="#services" data-en="Services">خدماتي</a><a href="#contact" data-en="Contact">تواصل</a>
   </div>
-  <a class="btn btn-o" href="#contact">تواصل معي</a>
+  <div class="nav-r"><div class="lang"><i></i><button data-l="ar">ع</button><button data-l="en">EN</button></div><a class="btn btn-o" href="#contact" data-en="Hire me">تواصل معي</a></div>
 </div></nav>
 
 <header class="hero" id="top">
@@ -191,14 +204,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
   <div class="beam"></div><div class="beam b2"></div>
   <div class="glow"></div>
   <div class="wrap">
-    <span class="pill"><b class="en">2026</b> مصمم جرافيك</span>
+    <span class="pill"><b class="en">2026</b> <span data-en="Graphic Designer">مصمم جرافيك</span></span>
     <h1><span class="grad">Khaled</span><br><span class="chrome">Mohamed</span></h1>
-    <p class="sub">مصمم جرافيك شغوف بالإبداع وتحويل الأفكار إلى تجارب بصرية مميزة ومؤثرة.</p>
+    <p class="sub" data-en="A graphic designer passionate about creativity — turning ideas into distinctive, impactful visual experiences.">مصمم جرافيك شغوف بالإبداع وتحويل الأفكار إلى تجارب بصرية مميزة ومؤثرة.</p>
     <div class="cta">
-      <a class="btn btn-o" href="#work">شاهد أعمالي</a>
+      <a class="btn btn-o" href="#work" data-en="View my work">شاهد أعمالي</a>
       <a class="btn btn-g wa" href="https://wa.me/201060595961" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.6 11.6 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>
-        كلمني واتساب</a>
+        <span data-en="WhatsApp me">كلمني واتساب</span></a>
     </div>
   </div>
 
@@ -253,27 +266,27 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 </header>
 
 <div class="marquee"><div class="track">
-  <span>الهويات البصرية<em>✦</em>بوسترات الأغاني<em>✦</em>الفعاليات والمعارض<em>✦</em>التصميمات الإبداعية<em>✦</em>موشن جرافيك<em>✦</em></span>
-  <span>الهويات البصرية<em>✦</em>بوسترات الأغاني<em>✦</em>الفعاليات والمعارض<em>✦</em>التصميمات الإبداعية<em>✦</em>موشن جرافيك<em>✦</em></span>
+  <span data-en="Visual Identity<em>✦</em>Song Posters<em>✦</em>Events &amp; Exhibitions<em>✦</em>Creative Design<em>✦</em>Motion Graphics<em>✦</em>">الهويات البصرية<em>✦</em>بوسترات الأغاني<em>✦</em>الفعاليات والمعارض<em>✦</em>التصميمات الإبداعية<em>✦</em>موشن جرافيك<em>✦</em></span>
+  <span data-en="Visual Identity<em>✦</em>Song Posters<em>✦</em>Events &amp; Exhibitions<em>✦</em>Creative Design<em>✦</em>Motion Graphics<em>✦</em>">الهويات البصرية<em>✦</em>بوسترات الأغاني<em>✦</em>الفعاليات والمعارض<em>✦</em>التصميمات الإبداعية<em>✦</em>موشن جرافيك<em>✦</em></span>
 </div></div>
 
 <section id="work"><div class="wrap">
   <div class="head">
-    <div><div class="eyebrow">أعمالي</div><h2><span class="grad">أعمال تمت المشاركة فيها</span></h2></div>
-    <p>شاركت في تصميم البوسترات وصناعة فيديوهات الأغاني لنجوم المهرجانات. اضغط على أي عمل لمشاهدة الكليب.</p>
+    <div><div class="eyebrow" data-en="Work">أعمالي</div><h2><span class="grad" data-en="Projects I took part in">أعمال تمت المشاركة فيها</span></h2></div>
+    <p data-en="I designed posters and worked on music videos for top Egyptian mahraganat artists. Tap any piece to watch the clip.">شاركت في تصميم البوسترات وصناعة فيديوهات الأغاني لنجوم المهرجانات. اضغط على أي عمل لمشاهدة الكليب.</p>
   </div>
   <div class="filters" id="filters"></div>
   <div class="vgrid" id="vgrid"></div>
 </div></section>
 
 <section id="about" style="padding-top:40px"><div class="wrap about">
-  <div class="portrait reveal"><span class="bgword">KHALED</span><img src="images/khaled-cut.webp" alt="Khaled Mohamed"><span class="badge"><span class="dot"></span>مصر · متاح للعمل</span></div>
+  <div class="portrait reveal"><span class="bgword">KHALED</span><img src="images/khaled-cut.webp" alt="Khaled Mohamed"><span class="badge"><span class="dot"></span><span data-en="Egypt · Available for work">مصر · متاح للعمل</span></span></div>
   <div class="about-text reveal">
-    <div class="eyebrow">نبذة عني</div>
-    <h2><span class="grad">تصميم</span> <span class="chrome">يترك أثرًا.</span></h2>
-    <p>أنا مصمم جرافيك شغوف بالإبداع وتحويل الأفكار إلى تجارب بصرية مميزة ومؤثرة.</p>
-    <p>أهتم بتصميم الهويات البصرية، والتصميمات الإبداعية، والفعاليات والمعارض، مع التركيز على أدق التفاصيل وتناسق الألوان وتكوين العناصر.</p>
-    <p>أسعى دائمًا إلى تقديم تصميمات مبتكرة تجمع بين الإبداع والجودة والاحترافية، وتعكس هوية كل مشروع بأسلوب بصري فريد.</p>
+    <div class="eyebrow" data-en="About">نبذة عني</div>
+    <h2><span class="grad" data-en="Design that">تصميم</span> <span class="chrome" data-en="leaves a mark.">يترك أثرًا.</span></h2>
+    <p data-en="I'm a graphic designer passionate about creativity and turning ideas into distinctive, impactful visual experiences.">أنا مصمم جرافيك شغوف بالإبداع وتحويل الأفكار إلى تجارب بصرية مميزة ومؤثرة.</p>
+    <p data-en="I focus on visual identities, creative design, and events &amp; exhibitions — with close attention to the finest details, color harmony, and composition.">أهتم بتصميم الهويات البصرية، والتصميمات الإبداعية، والفعاليات والمعارض، مع التركيز على أدق التفاصيل وتناسق الألوان وتكوين العناصر.</p>
+    <p data-en="I always aim to deliver innovative designs that combine creativity, quality, and professionalism, reflecting the identity of every project with a unique visual style.">أسعى دائمًا إلى تقديم تصميمات مبتكرة تجمع بين الإبداع والجودة والاحترافية، وتعكس هوية كل مشروع بأسلوب بصري فريد.</p>
     <div class="skills">
       <span class="en">Photoshop</span><span class="en">Illustrator</span><span class="en">Premiere Pro</span><span class="en">After Effects</span>
     </div>
@@ -282,75 +295,98 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 
 <section id="services" style="padding-top:40px"><div class="wrap">
   <div class="head">
-    <div><div class="eyebrow">خدماتي</div><h2><span class="grad">بقدّم إيه؟</span></h2></div>
-    <p>من بوستر واحد لحد هوية بصرية كاملة بالموشن.</p>
+    <div><div class="eyebrow" data-en="Services">خدماتي</div><h2><span class="grad" data-en="What I do">بقدّم إيه؟</span></h2></div>
+    <p data-en="From a single poster to a full visual identity in motion.">من بوستر واحد لحد هوية بصرية كاملة بالموشن.</p>
   </div>
   <div class="sgrid">
-    <div class="svc reveal wide"><div class="ic en">01</div><h3>بوسترات وأغلفة الأغاني</h3><p>أفيشات وأغلفة كليبات بتشد العين من أول نظرة، بدمج الصور والخطوط والتأثيرات.</p></div>
-    <div class="svc reveal"><div class="ic en">02</div><h3>الهويات البصرية</h3><p>لوجوهات وهويات متكاملة تعبّر عن روح كل مشروع.</p></div>
-    <div class="svc reveal"><div class="ic en">03</div><h3>الفعاليات والمعارض</h3><p>تصميمات للفعاليات والمعارض من البانرات لحد الواجهات.</p></div>
-    <div class="svc reveal"><div class="ic en">04</div><h3>السوشيال ميديا</h3><p>بوستات وكوفرات بتوقف السكرول.</p></div>
-    <div class="svc reveal"><div class="ic en">05</div><h3>موشن جرافيك ومونتاج</h3><p>تحريك البوسترات والعناوين ومونتاج الفيديوهات.</p></div>
+    <div class="svc reveal wide"><div class="ic en">01</div><h3 data-en="Song posters &amp; covers">بوسترات وأغلفة الأغاني</h3><p data-en="Eye-catching posters and music-video covers that blend photography, type and effects.">أفيشات وأغلفة كليبات بتشد العين من أول نظرة، بدمج الصور والخطوط والتأثيرات.</p></div>
+    <div class="svc reveal"><div class="ic en">02</div><h3 data-en="Visual identity">الهويات البصرية</h3><p data-en="Logos and complete identities that capture the spirit of every project.">لوجوهات وهويات متكاملة تعبّر عن روح كل مشروع.</p></div>
+    <div class="svc reveal"><div class="ic en">03</div><h3 data-en="Events &amp; exhibitions">الفعاليات والمعارض</h3><p data-en="Designs for events and exhibitions — from banners to full booths.">تصميمات للفعاليات والمعارض من البانرات لحد الواجهات.</p></div>
+    <div class="svc reveal"><div class="ic en">04</div><h3 data-en="Social media">السوشيال ميديا</h3><p data-en="Posts and covers that stop the scroll.">بوستات وكوفرات بتوقف السكرول.</p></div>
+    <div class="svc reveal"><div class="ic en">05</div><h3 data-en="Motion graphics &amp; editing">موشن جرافيك ومونتاج</h3><p data-en="Animated posters and titles, plus video editing.">تحريك البوسترات والعناوين ومونتاج الفيديوهات.</p></div>
   </div>
 </div></section>
 
 <section id="contact" style="padding-top:40px"><div class="wrap">
   <div class="contact-card reveal">
-    <div class="eyebrow">تواصل</div>
-    <h2><span class="chrome">لنعمل معًا</span></h2>
-    <h3>هل لديك فكرة أو مشروع جديد؟</h3>
-    <p>دعنا نحول أفكارك إلى تجربة بصرية استثنائية تجمع بين الإبداع والتميز.<br>يسعدني التعاون معك لإنشاء تصميمات تعكس رؤيتك وتترك انطباعًا مميزًا.</p>
+    <div class="eyebrow" data-en="Contact">تواصل</div>
+    <h2><span class="chrome" data-en="Let's work together">لنعمل معًا</span></h2>
+    <h3 data-en="Have an idea or a new project?">هل لديك فكرة أو مشروع جديد؟</h3>
+    <p data-en="Let's turn your ideas into an exceptional visual experience that blends creativity and distinction.&lt;br&gt;I'd be glad to work with you on designs that reflect your vision and leave a lasting impression.">دعنا نحول أفكارك إلى تجربة بصرية استثنائية تجمع بين الإبداع والتميز.<br>يسعدني التعاون معك لإنشاء تصميمات تعكس رؤيتك وتترك انطباعًا مميزًا.</p>
     <a class="btn btn-o wa" href="https://wa.me/201060595961" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.6 11.6 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>
-      تواصل معي على واتساب</a>
+      <span data-en="Message me on WhatsApp">تواصل معي على واتساب</span></a>
     <span class="num">+20 106 059 5961</span>
   </div>
 </div></section>
 
-<footer><div class="wrap"><span>© 2026 Khaled Mohamed</span><span>مصمم جرافيك</span></div></footer>
+<footer><div class="wrap"><span>© 2026 Khaled Mohamed</span><span data-en="Graphic Designer">مصمم جرافيك</span></div></footer>
 
 <div class="modal" id="modal">
   <div class="box">
     <div class="frame" id="frame"></div>
-    <div class="bar"><div><b id="mt"></b><small id="ma"></small></div><div class="acts"><a id="ytlink" class="o" href="#" target="_blank" rel="noopener">شاهد على يوتيوب ↗</a><button class="close" id="close">إغلاق ✕</button></div></div>
+    <div class="bar"><div><b id="mt"></b><small id="ma"></small></div><div class="acts"><a id="ytlink" class="o" href="#" target="_blank" rel="noopener" data-en="Watch on YouTube ↗">شاهد على يوتيوب ↗</a><button class="close" id="close" data-en="Close ✕">إغلاق ✕</button></div></div>
   </div>
 </div>
 
 <script>
 /* ===== الأعمال: عدّل هنا (img = الصورة، yt = كود فيديو يوتيوب) ===== */
 const works=[
-  {img:'09',title:'ملوك ساقت كارها',artist:'عصام صاصا',yt:'Jtkyais1jmQ'},
-  {img:'02',title:'أنا الزعيم',artist:'عصام صاصا',yt:'3O80r76uZOQ'},
-  {img:'04',title:'متركزش وتتأمل وتبصبص',artist:'عصام صاصا',yt:'pPL4vSjDj9c'},
-  {img:'10',title:'زعلان مني ومش منكو',artist:'أمين خطاب × مصطفى الجن',yt:'i24xub2G_5E'},
-  {img:'05',title:'قالوا عليا سفاح مسيطر',artist:'عصام صاصا',yt:'OsPQjlFt1sY'},
-  {img:'01',title:'طب بحبك',artist:'حمو المرشدي',yt:'Hk-oNOL87HI'},
-  {img:'08',title:'أحلى باي باي',artist:'عصام صاصا',yt:'7uhUrIq8evg'},
-  {img:'03',title:'استفدت إيه بكبريائك',artist:'عصام صاصا',yt:'5ZNpn_7oHXA'},
-  {img:'11',title:'الغاوي',artist:'أمين خطاب & مصطفى الجن',yt:'pY_DFKf8kr0'},
-  {img:'06',title:'أربع بيبان اتهدوا',artist:'عصام صاصا',yt:'bgQ0YiLR2QQ'},
-  {img:'07',title:'يا صباح عنابي',artist:'عصام صاصا',yt:'CR9gVspoq30'},
-  {img:'12',title:'لو نرجع تاني عيال',artist:'أمين خطاب',yt:'iOaFqw_fvwI'}
+  {img:'09',title:'ملوك ساقت كارها',en:'Molouk Sa\'et Karha',artist:'عصام صاصا',aen:'Essam Sasa',yt:'Jtkyais1jmQ'},
+  {img:'02',title:'أنا الزعيم',en:'Ana El Zaeem',artist:'عصام صاصا',aen:'Essam Sasa',yt:'3O80r76uZOQ'},
+  {img:'04',title:'متركزش وتتأمل وتبصبص',en:'Matrakezsh We Tet\'amel We Tbasbas',artist:'عصام صاصا',aen:'Essam Sasa',yt:'pPL4vSjDj9c'},
+  {img:'10',title:'زعلان مني ومش منكو',en:'Za\'lan Menny We Mesh Mennko',artist:'أمين خطاب × مصطفى الجن',aen:'Ameen Khattab × Mostafa Elgen',yt:'i24xub2G_5E'},
+  {img:'13',title:'الأخصام ضموا لبعضيهم',en:'El Akhsam Dammo Le Ba\'deehom',artist:'عصام صاصا',aen:'Essam Sasa',yt:'Mrk_ypaS4Tc'},
+  {img:'14',title:'انت الا بتكش وعامل حملة',en:'Enta Ella Betkesh We Amel Hamla',artist:'عصام صاصا × مصطفى الجن',aen:'Essam Sasa × Mostafa Elgen',yt:'26gvLBdpQsI'},
+  {img:'05',title:'قالوا عليا سفاح مسيطر',en:'Alo Alaya Saffah Mosaytar',artist:'عصام صاصا',aen:'Essam Sasa',yt:'OsPQjlFt1sY'},
+  {img:'01',title:'طب بحبك',en:'Tab Bahebak',artist:'حمو المرشدي',aen:'Hamo El Morshedy',yt:'Hk-oNOL87HI'},
+  {img:'15',title:'الغابة ليها بابا',en:'El Ghaba Leeha Baba',artist:'هادي × مصطفى الجن',aen:'Hady × Mostafa Elgen',yt:'QonqLGRyMLk'},
+  {img:'08',title:'أحلى باي باي',en:'Ahla Bye Bye',artist:'عصام صاصا',aen:'Essam Sasa',yt:'7uhUrIq8evg'},
+  {img:'03',title:'استفدت إيه بكبريائك',en:'Estafadt Eh Be Kebriaek',artist:'عصام صاصا',aen:'Essam Sasa',yt:'5ZNpn_7oHXA'},
+  {img:'16',title:'أخوك تمام تمام',en:'Akhook Tamam Tamam',artist:'مصطفى الجن × هادي',aen:'Mostafa Elgen × Hady',yt:'QRJUB4dBVPM'},
+  {img:'11',title:'الغاوي',en:'El Ghawy',artist:'أمين خطاب & مصطفى الجن',aen:'Ameen Khattab & Mostafa Elgen',yt:'pY_DFKf8kr0'},
+  {img:'06',title:'أربع بيبان اتهدوا',en:'Arba\' Beban Ethaddo',artist:'عصام صاصا',aen:'Essam Sasa',yt:'bgQ0YiLR2QQ'},
+  {img:'07',title:'يا صباح عنابي',en:'Ya Sabah Enaby',artist:'عصام صاصا',aen:'Essam Sasa',yt:'CR9gVspoq30'},
+  {img:'12',title:'لو نرجع تاني عيال',en:'Law Nerga\' Tany Eyal',artist:'أمين خطاب',aen:'Ameen Khattab',yt:'iOaFqw_fvwI'}
 ];
 const g=document.getElementById('vgrid'),fl=document.getElementById('filters');
-works.forEach((w,i)=>{
-  const a=document.createElement('a');
-  a.className='vcard reveal'+(i===0?' feat':'');a.dataset.artist=w.artist;
-  a.href=w.yt?'https://www.youtube.com/watch?v='+w.yt:'images/posters/'+w.img+'.jpg';a.target='_blank';a.rel='noopener';
-  a.innerHTML=`<div class="thumb"><img loading="lazy" src="images/posters/${w.img}.jpg" alt="${w.title} — ${w.artist}"><span class="vnum en">${String(i+1).padStart(2,'0')}</span>${w.yt?'<div class="play"></div>':''}<div class="vmeta"><b>${w.title}</b><small>${w.artist}</small></div></div>`;
-  a.addEventListener('click',e=>{e.preventDefault();openW(w)});
-  g.appendChild(a);
-});
-/* filters by main artist */
+let lang='ar';try{const v=localStorage.getItem('km-lang');if(v==='en'||v==='ar')lang=v}catch(e){}
+const T=w=>lang==='en'?w.en:w.title, A=w=>lang==='en'?w.aen:w.artist;
 const main=a=>a.split(/[×&]/)[0].trim();
-const counts={};works.forEach(w=>{const m=main(w.artist);counts[m]=(counts[m]||0)+1});
-const mk=(label,val,n)=>{const b=document.createElement('button');b.innerHTML=`${label}<span class="en">${n}</span>`;b.onclick=()=>{fl.querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on');g.querySelectorAll('.vcard').forEach(c=>c.classList.toggle('hide',val&&main(c.dataset.artist)!==val))};fl.appendChild(b);return b};
-mk('الكل','',works.length).classList.add('on');
-Object.entries(counts).sort((a,b)=>b[1]-a[1]).forEach(([k,n])=>mk(k,k,n));
+let filt='';
+function renderWorks(){
+  g.innerHTML='';
+  works.forEach((w,i)=>{
+    const a=document.createElement('a');
+    a.className='vcard reveal in'+(i===0?' feat':'');a.dataset.m=main(w.artist);
+    a.href='https://www.youtube.com/watch?v='+w.yt;a.target='_blank';a.rel='noopener';
+    a.innerHTML=`<div class="thumb"><img loading="lazy" src="images/posters/${w.img}.jpg" alt="${T(w)} — ${A(w)}"><span class="vnum en">${String(i+1).padStart(2,'0')}</span><div class="play"></div><div class="vmeta"><b>${T(w)}</b><small>${A(w)}</small></div></div>`;
+    if(filt&&a.dataset.m!==filt)a.classList.add('hide');
+    a.addEventListener('click',e=>{e.preventDefault();openW(w)});
+    g.appendChild(a);
+  });
+  const counts={};works.forEach(w=>{const m=main(w.artist);counts[m]=(counts[m]||0)+1});
+  const label=m=>{if(lang!=='en')return m;const w=works.find(x=>main(x.artist)===m);return main(w.aen)};
+  fl.innerHTML='';
+  const mk=(lb,val,n)=>{const b=document.createElement('button');b.innerHTML=`${lb}<span class="en">${n}</span>`;if(val===filt)b.classList.add('on');
+    b.onclick=()=>{filt=val;fl.querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on');g.querySelectorAll('.vcard').forEach(c=>c.classList.toggle('hide',!!val&&c.dataset.m!==val))};fl.appendChild(b)};
+  mk(lang==='en'?'All':'الكل','',works.length);
+  Object.entries(counts).sort((a,b)=>b[1]-a[1]).forEach(([k,n])=>mk(label(k),k,n));
+}
+function applyLang(){
+  document.documentElement.lang=lang;document.documentElement.dir=lang==='ar'?'rtl':'ltr';
+  document.querySelectorAll('[data-en]').forEach(el=>{if(el.dataset.ar===undefined)el.dataset.ar=el.innerHTML;el.innerHTML=lang==='en'?el.dataset.en:el.dataset.ar});
+  document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('on',b.dataset.l===lang));
+  document.title=lang==='en'?'Khaled Mohamed — Graphic Designer':'Khaled Mohamed — مصمم جرافيك';
+  renderWorks();
+}
+document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>{if(b.dataset.l===lang)return;lang=b.dataset.l;try{localStorage.setItem('km-lang',lang)}catch(e){}
+  document.body.classList.add('swap');setTimeout(()=>{applyLang();document.body.classList.remove('swap')},280)});
+applyLang();
 
 const modal=document.getElementById('modal'),frame=document.getElementById('frame'),yl=document.getElementById('ytlink');
 function openW(w){
-  document.getElementById('mt').textContent=w.title;document.getElementById('ma').textContent=w.artist;
+  document.getElementById('mt').textContent=T(w);document.getElementById('ma').textContent=A(w);
   if(w.yt){frame.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${w.yt}?autoplay=1&rel=0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>`;yl.href='https://www.youtube.com/watch?v='+w.yt;yl.style.display=''}
   else{frame.innerHTML=`<img src="images/posters/${w.img}.jpg" alt="">`;yl.style.display='none'}
   modal.classList.add('open');
