@@ -56,7 +56,43 @@ nav .wrap{display:flex;justify-content:space-between;align-items:center;height:7
 .bggrid{position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(ellipse 70% 60% at 50% 40%,#000 30%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 40%,#000 30%,transparent 75%);opacity:.6;pointer-events:none}
 .pill{display:inline-flex;align-items:center;gap:8px;padding:6px 8px 6px 14px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.03);font-size:13px;color:#d6d6da;position:relative}
 .pill b{background:rgba(255,90,31,.15);color:var(--orange2);border-radius:999px;padding:2px 10px;font-weight:600;font-size:11.5px}
-.hero h1{font-family:'Space Grotesk';font-weight:500;font-size:clamp(56px,10vw,136px);line-height:.98;letter-spacing:-.04em;margin:26px auto 24px;position:relative;direction:ltr}
+/* typographic name */
+.hero h1.kmtype{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(52px,13vw,186px);line-height:.88;letter-spacing:-.06em;margin:30px auto 34px;position:relative;direction:ltr;display:inline-block;text-align:left}
+.kt-row{display:flex;align-items:flex-start}
+.kt-2{padding-left:1.15em;align-items:center;margin-top:.02em}
+.kt-word{display:flex;align-items:center}
+.kmtype .ch{display:inline-block;opacity:0;transform:translateY(.4em) rotate(5deg);filter:blur(12px);transition:opacity .8s ease,transform 1.1s cubic-bezier(.2,.8,.2,1),filter .8s ease;transition-delay:calc(var(--i)*60ms + 150ms)}
+html.ready .kmtype .ch{opacity:1;transform:none;filter:none}
+.kt-sup{font-size:.1em;font-weight:500;letter-spacing:.04em;color:var(--orange);margin:.55em 0 0 .3em;line-height:1}
+.kt-note{font-size:.075em;font-weight:500;line-height:1.35;letter-spacing:.2em;text-transform:uppercase;color:var(--mute);text-align:right;border-right:1px solid var(--orange);padding-right:.8em;margin-right:.45em;white-space:nowrap}
+.kt-o{width:.64em;height:.64em;border-radius:50%;border:.12em solid var(--orange);margin:0 .04em 0 .06em;position:relative;box-shadow:0 0 34px rgba(255,90,31,.55),inset 0 0 22px rgba(255,90,31,.45)}
+.kt-o::after{content:"";position:absolute;top:50%;left:50%;width:.09em;height:.09em;margin:-.045em 0 0 -.045em;border-radius:50%;background:#ffb98a;box-shadow:0 0 14px var(--orange)}
+html.ready .kt-o{animation:ospin 9s linear infinite 2s}
+@keyframes ospin{50%{box-shadow:0 0 60px rgba(255,90,31,.85),inset 0 0 30px rgba(255,90,31,.6)}}
+.kt-line{position:absolute;left:0;bottom:-.14em;height:1px;width:100%;background:linear-gradient(90deg,transparent,var(--orange),transparent);transform:scaleX(0);transition:transform 1.4s cubic-bezier(.7,0,.2,1) 1s}
+html.ready .kt-line{transform:scaleX(1)}
+@media(max-width:600px){.kmtype .kt-note{display:none}.kt-2{padding-left:.55em}}
+
+/* preloader */
+html.loading,html.loading body{overflow:hidden}
+#loader{position:fixed;inset:0;z-index:400;background:#060606;display:grid;place-items:center;overflow:hidden;transition:transform 1.1s cubic-bezier(.77,0,.18,1)}
+#loader::before{content:"";position:absolute;inset:auto 0 0 0;height:70%;background:radial-gradient(55% 60% at 50% 100%,rgba(255,90,31,.22),transparent 70%);pointer-events:none}
+#loader .ld-grid{position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(ellipse 50% 50% at 50% 50%,#000 20%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse 50% 50% at 50% 50%,#000 20%,transparent 75%);opacity:.7}
+#loader.done{transform:translateY(-100%)}
+#loader.done .ld-in{opacity:0;transform:translateY(-40px);transition:.5s}
+.ld-in{position:relative;width:min(420px,80vw);text-align:center;direction:ltr}
+.ld-chip{position:relative;width:112px;height:112px;margin:0 auto 38px;border-radius:26px;padding:2px;overflow:hidden;background:#1c1c1f;box-shadow:0 0 80px rgba(255,90,31,.28);animation:ldfloat 2.6s ease-in-out infinite}
+.ld-chip::before{content:"";position:absolute;inset:-50%;background:conic-gradient(transparent 0 68%,#ffb98a,#ff5a1f 80%,transparent 86%);animation:ldspin 1.5s linear infinite}
+.ld-chip b{position:relative;z-index:1;display:grid;place-items:center;width:100%;height:100%;border-radius:24px;background:linear-gradient(180deg,#2a2a2d,#0c0c0d);font-family:'Space Grotesk',sans-serif;font-size:46px;font-weight:700;letter-spacing:-.04em}
+@keyframes ldspin{to{transform:rotate(360deg)}}
+@keyframes ldfloat{50%{transform:translateY(-8px)}}
+.ld-name{font-family:'Space Grotesk',sans-serif;font-size:12px;letter-spacing:.45em;color:#cfcfd4;padding-left:.45em}
+.ld-bar{height:2px;margin-top:20px;background:rgba(255,255,255,.08);border-radius:2px;overflow:hidden}
+.ld-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#ffb98a,#ff5a1f);box-shadow:0 0 14px var(--orange)}
+.ld-meta{display:flex;justify-content:space-between;margin-top:12px;font-family:'Space Grotesk',sans-serif;font-size:11px;letter-spacing:.22em;color:var(--mute)}
+.ld-meta #ldn{color:#fff}
+.ld-big{position:absolute;right:4vw;bottom:-2vw;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:min(26vw,300px);line-height:1;letter-spacing:-.06em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.1);direction:ltr;pointer-events:none}
+.ld-big::after{content:"%";font-size:.3em;-webkit-text-stroke:0;color:var(--orange);margin-left:.08em}
 .hero p.sub{max-width:600px;margin:0 auto;color:var(--mute);font-size:17px;position:relative}
 .cta{display:flex;gap:12px;justify-content:center;margin-top:34px;position:relative}
 .circuit{position:relative;margin:30px auto 0;max-width:1240px}
@@ -185,6 +221,34 @@ html[lang="en"] .eyebrow,html[lang="en"] h2{letter-spacing:-.01em}
 </style>
 </head>
 <body>
+<div id="loader" aria-hidden="true">
+  <div class="ld-grid"></div>
+  <div class="ld-big" id="ldbig">0</div>
+  <div class="ld-in">
+    <div class="ld-chip"><b><span class="chrome">KM</span></b></div>
+    <div class="ld-name">KHALED MOHAMED</div>
+    <div class="ld-bar"><i></i></div>
+    <div class="ld-meta"><span>LOADING PORTFOLIO</span><span id="ldn">000</span></div>
+  </div>
+</div>
+<script>
+(function(){
+  var d=document.documentElement;d.classList.add('loading');
+  var L=document.getElementById('loader'),bar=L.querySelector('.ld-bar i'),n=document.getElementById('ldn'),big=document.getElementById('ldbig');
+  var p=0,loaded=document.readyState==='complete',t0=performance.now(),MIN=1900;
+  addEventListener('load',function(){loaded=true});
+  setTimeout(function(){loaded=true},7000);
+  function done(){L.classList.add('done');d.classList.remove('loading');d.classList.add('ready');setTimeout(function(){L.remove()},1300)}
+  function tick(now){
+    var el=now-t0,target=(loaded&&el>=MIN)?100:Math.min(92,el/MIN*92);
+    p+=(target-p)*.09;if(target-p<.4)p=target;
+    var v=Math.floor(p);bar.style.width=p+'%';n.textContent=String(v).padStart(3,'0');big.textContent=v;
+    if(p>=100){setTimeout(done,300);return}
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+})();
+</script>
 
 <div class="topbar"><div class="wrap">
   <a href="https://wa.me/201060595961" target="_blank" rel="noopener"><span class="dot"></span><span data-en="Available for new projects — let's work together →">متاح لمشاريع جديدة — لنعمل معًا ←</span></a>
@@ -205,7 +269,11 @@ html[lang="en"] .eyebrow,html[lang="en"] h2{letter-spacing:-.01em}
   <div class="glow"></div>
   <div class="wrap">
     <span class="pill"><b class="en">2026</b> <span data-en="Graphic Designer">مصمم جرافيك</span></span>
-    <h1><span class="grad">Khaled</span><br><span class="chrome">Mohamed</span></h1>
+    <h1 class="kmtype" aria-label="Khaled Mohamed">
+      <span class="kt-row kt-1" aria-hidden="true"><span class="kt-word"><span class="ch grad" style="--i:0">K</span><span class="ch grad" style="--i:1">H</span><span class="ch grad" style="--i:2">A</span><span class="ch grad" style="--i:3">L</span><span class="ch grad" style="--i:4">E</span><span class="ch grad" style="--i:5">D</span></span><span class="ch kt-sup" style="--i:6">©26</span></span>
+      <span class="kt-row kt-2" aria-hidden="true"><span class="ch kt-note" style="--i:7">Graphic<br>Designer</span><span class="kt-word"><span class="ch chrome" style="--i:8;animation-delay:0s">M</span><span class="ch kt-o" style="--i:9"></span><span class="ch chrome" style="--i:10;animation-delay:.2s">H</span><span class="ch chrome" style="--i:11;animation-delay:.4s">A</span><span class="ch chrome" style="--i:12;animation-delay:.6s">M</span><span class="ch chrome" style="--i:13;animation-delay:.8s">E</span><span class="ch chrome" style="--i:14;animation-delay:1s">D</span></span></span>
+      <span class="kt-line" aria-hidden="true"></span>
+    </h1>
     <p class="sub" data-en="A graphic designer passionate about creativity — turning ideas into distinctive, impactful visual experiences.">مصمم جرافيك شغوف بالإبداع وتحويل الأفكار إلى تجارب بصرية مميزة ومؤثرة.</p>
     <div class="cta">
       <a class="btn btn-o" href="#work" data-en="View my work">شاهد أعمالي</a>
